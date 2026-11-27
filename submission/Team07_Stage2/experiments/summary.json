@@ -1,0 +1,744 @@
+{
+  "experiments": [
+    {
+      "experiment": "mobilenet_v3_small__feature_extraction",
+      "architecture": "mobilenet_v3_small",
+      "strategy": "feature_extraction",
+      "pretrained_source": "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth",
+      "epochs": 15,
+      "best_epoch": 2,
+      "seed": 42,
+      "input_size": 224,
+      "batch_size": 32,
+      "optimizer": "AdamW",
+      "head_learning_rate": 0.001,
+      "backbone_learning_rate": 0,
+      "weight_decay": 0.0001,
+      "scheduler": "CosineAnnealingLR",
+      "augmentation": "none",
+      "parameters": 1524006,
+      "trainable_parameters": 596998,
+      "trainable_layers": [
+        "classifier.0.weight",
+        "classifier.0.bias",
+        "classifier.3.weight",
+        "classifier.3.bias"
+      ],
+      "checkpoint_bytes": 6217034,
+      "training_seconds": 44.80407499987632,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "confusion_matrix": [
+          [
+            45,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            45,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            45,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            45,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            45,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            45
+          ]
+        ],
+        "per_class": {
+          "crazing": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "inclusion": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "patches": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "pitted_surface": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "rolled_in_scale": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "scratches": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 270.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 270.0
+          }
+        },
+        "loss": 0.02315027259842113
+      },
+      "checkpoint": "experiments/mobilenet_v3_small__feature_extraction/best.pth"
+    },
+    {
+      "experiment": "mobilenet_v3_small__full_fine_tuning",
+      "architecture": "mobilenet_v3_small",
+      "strategy": "full_fine_tuning",
+      "pretrained_source": "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth",
+      "epochs": 15,
+      "best_epoch": 7,
+      "seed": 42,
+      "input_size": 224,
+      "batch_size": 32,
+      "optimizer": "AdamW",
+      "head_learning_rate": 0.001,
+      "backbone_learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "scheduler": "CosineAnnealingLR",
+      "augmentation": "none",
+      "parameters": 1524006,
+      "trainable_parameters": 1524006,
+      "trainable_layers": [
+        "features.0.0.weight",
+        "features.0.1.weight",
+        "features.0.1.bias",
+        "features.1.block.0.0.weight",
+        "features.1.block.0.1.weight",
+        "features.1.block.0.1.bias",
+        "features.1.block.1.fc1.weight",
+        "features.1.block.1.fc1.bias",
+        "features.1.block.1.fc2.weight",
+        "features.1.block.1.fc2.bias",
+        "features.1.block.2.0.weight",
+        "features.1.block.2.1.weight",
+        "features.1.block.2.1.bias",
+        "features.2.block.0.0.weight",
+        "features.2.block.0.1.weight",
+        "features.2.block.0.1.bias",
+        "features.2.block.1.0.weight",
+        "features.2.block.1.1.weight",
+        "features.2.block.1.1.bias",
+        "features.2.block.2.0.weight",
+        "features.2.block.2.1.weight",
+        "features.2.block.2.1.bias",
+        "features.3.block.0.0.weight",
+        "features.3.block.0.1.weight",
+        "features.3.block.0.1.bias",
+        "features.3.block.1.0.weight",
+        "features.3.block.1.1.weight",
+        "features.3.block.1.1.bias",
+        "features.3.block.2.0.weight",
+        "features.3.block.2.1.weight",
+        "features.3.block.2.1.bias",
+        "features.4.block.0.0.weight",
+        "features.4.block.0.1.weight",
+        "features.4.block.0.1.bias",
+        "features.4.block.1.0.weight",
+        "features.4.block.1.1.weight",
+        "features.4.block.1.1.bias",
+        "features.4.block.2.fc1.weight",
+        "features.4.block.2.fc1.bias",
+        "features.4.block.2.fc2.weight",
+        "features.4.block.2.fc2.bias",
+        "features.4.block.3.0.weight",
+        "features.4.block.3.1.weight",
+        "features.4.block.3.1.bias",
+        "features.5.block.0.0.weight",
+        "features.5.block.0.1.weight",
+        "features.5.block.0.1.bias",
+        "features.5.block.1.0.weight",
+        "features.5.block.1.1.weight",
+        "features.5.block.1.1.bias",
+        "features.5.block.2.fc1.weight",
+        "features.5.block.2.fc1.bias",
+        "features.5.block.2.fc2.weight",
+        "features.5.block.2.fc2.bias",
+        "features.5.block.3.0.weight",
+        "features.5.block.3.1.weight",
+        "features.5.block.3.1.bias",
+        "features.6.block.0.0.weight",
+        "features.6.block.0.1.weight",
+        "features.6.block.0.1.bias",
+        "features.6.block.1.0.weight",
+        "features.6.block.1.1.weight",
+        "features.6.block.1.1.bias",
+        "features.6.block.2.fc1.weight",
+        "features.6.block.2.fc1.bias",
+        "features.6.block.2.fc2.weight",
+        "features.6.block.2.fc2.bias",
+        "features.6.block.3.0.weight",
+        "features.6.block.3.1.weight",
+        "features.6.block.3.1.bias",
+        "features.7.block.0.0.weight",
+        "features.7.block.0.1.weight",
+        "features.7.block.0.1.bias",
+        "features.7.block.1.0.weight",
+        "features.7.block.1.1.weight",
+        "features.7.block.1.1.bias",
+        "features.7.block.2.fc1.weight",
+        "features.7.block.2.fc1.bias",
+        "features.7.block.2.fc2.weight",
+        "features.7.block.2.fc2.bias",
+        "features.7.block.3.0.weight",
+        "features.7.block.3.1.weight",
+        "features.7.block.3.1.bias",
+        "features.8.block.0.0.weight",
+        "features.8.block.0.1.weight",
+        "features.8.block.0.1.bias",
+        "features.8.block.1.0.weight",
+        "features.8.block.1.1.weight",
+        "features.8.block.1.1.bias",
+        "features.8.block.2.fc1.weight",
+        "features.8.block.2.fc1.bias",
+        "features.8.block.2.fc2.weight",
+        "features.8.block.2.fc2.bias",
+        "features.8.block.3.0.weight",
+        "features.8.block.3.1.weight",
+        "features.8.block.3.1.bias",
+        "features.9.block.0.0.weight",
+        "features.9.block.0.1.weight",
+        "features.9.block.0.1.bias",
+        "features.9.block.1.0.weight",
+        "features.9.block.1.1.weight",
+        "features.9.block.1.1.bias",
+        "features.9.block.2.fc1.weight",
+        "features.9.block.2.fc1.bias",
+        "features.9.block.2.fc2.weight",
+        "features.9.block.2.fc2.bias",
+        "features.9.block.3.0.weight",
+        "features.9.block.3.1.weight",
+        "features.9.block.3.1.bias",
+        "features.10.block.0.0.weight",
+        "features.10.block.0.1.weight",
+        "features.10.block.0.1.bias",
+        "features.10.block.1.0.weight",
+        "features.10.block.1.1.weight",
+        "features.10.block.1.1.bias",
+        "features.10.block.2.fc1.weight",
+        "features.10.block.2.fc1.bias",
+        "features.10.block.2.fc2.weight",
+        "features.10.block.2.fc2.bias",
+        "features.10.block.3.0.weight",
+        "features.10.block.3.1.weight",
+        "features.10.block.3.1.bias",
+        "features.11.block.0.0.weight",
+        "features.11.block.0.1.weight",
+        "features.11.block.0.1.bias",
+        "features.11.block.1.0.weight",
+        "features.11.block.1.1.weight",
+        "features.11.block.1.1.bias",
+        "features.11.block.2.fc1.weight",
+        "features.11.block.2.fc1.bias",
+        "features.11.block.2.fc2.weight",
+        "features.11.block.2.fc2.bias",
+        "features.11.block.3.0.weight",
+        "features.11.block.3.1.weight",
+        "features.11.block.3.1.bias",
+        "features.12.0.weight",
+        "features.12.1.weight",
+        "features.12.1.bias",
+        "classifier.0.weight",
+        "classifier.0.bias",
+        "classifier.3.weight",
+        "classifier.3.bias"
+      ],
+      "checkpoint_bytes": 6217034,
+      "training_seconds": 48.43662129994482,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "confusion_matrix": [
+          [
+            45,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            45,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            45,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            45,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            45,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            45
+          ]
+        ],
+        "per_class": {
+          "crazing": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "inclusion": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "patches": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "pitted_surface": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "rolled_in_scale": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "scratches": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 270.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 270.0
+          }
+        },
+        "loss": 0.0065165119704842156
+      },
+      "checkpoint": "experiments/mobilenet_v3_small__full_fine_tuning/best.pth"
+    },
+    {
+      "experiment": "resnet18__feature_extraction",
+      "architecture": "resnet18",
+      "strategy": "feature_extraction",
+      "pretrained_source": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+      "epochs": 15,
+      "best_epoch": 8,
+      "seed": 42,
+      "input_size": 224,
+      "batch_size": 32,
+      "optimizer": "AdamW",
+      "head_learning_rate": 0.001,
+      "backbone_learning_rate": 0,
+      "weight_decay": 0.0001,
+      "scheduler": "CosineAnnealingLR",
+      "augmentation": "none",
+      "parameters": 11179590,
+      "trainable_parameters": 3078,
+      "trainable_layers": [
+        "fc.weight",
+        "fc.bias"
+      ],
+      "checkpoint_bytes": 44793022,
+      "training_seconds": 48.419226800091565,
+      "metrics": {
+        "accuracy": 0.9925925925925926,
+        "macro_precision": 0.9926731078904991,
+        "macro_recall": 0.9925925925925926,
+        "macro_f1": 0.9925921352887644,
+        "confusion_matrix": [
+          [
+            45,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            44,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            45,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            45,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            45,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            44
+          ]
+        ],
+        "per_class": {
+          "crazing": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "inclusion": {
+            "precision": 0.9777777777777777,
+            "recall": 0.9777777777777777,
+            "f1-score": 0.9777777777777777,
+            "support": 45.0
+          },
+          "patches": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "pitted_surface": {
+            "precision": 0.9782608695652174,
+            "recall": 1.0,
+            "f1-score": 0.989010989010989,
+            "support": 45.0
+          },
+          "rolled_in_scale": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "scratches": {
+            "precision": 1.0,
+            "recall": 0.9777777777777777,
+            "f1-score": 0.9887640449438202,
+            "support": 45.0
+          },
+          "accuracy": 0.9925925925925926,
+          "macro avg": {
+            "precision": 0.9926731078904991,
+            "recall": 0.9925925925925926,
+            "f1-score": 0.9925921352887644,
+            "support": 270.0
+          },
+          "weighted avg": {
+            "precision": 0.9926731078904991,
+            "recall": 0.9925925925925926,
+            "f1-score": 0.9925921352887646,
+            "support": 270.0
+          }
+        },
+        "loss": 0.08443948102218134
+      },
+      "checkpoint": "experiments/resnet18__feature_extraction/best.pth"
+    },
+    {
+      "experiment": "resnet18__full_fine_tuning",
+      "architecture": "resnet18",
+      "strategy": "full_fine_tuning",
+      "pretrained_source": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+      "epochs": 15,
+      "best_epoch": 2,
+      "seed": 42,
+      "input_size": 224,
+      "batch_size": 32,
+      "optimizer": "AdamW",
+      "head_learning_rate": 0.001,
+      "backbone_learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "scheduler": "CosineAnnealingLR",
+      "augmentation": "none",
+      "parameters": 11179590,
+      "trainable_parameters": 11179590,
+      "trainable_layers": [
+        "conv1.weight",
+        "bn1.weight",
+        "bn1.bias",
+        "layer1.0.conv1.weight",
+        "layer1.0.bn1.weight",
+        "layer1.0.bn1.bias",
+        "layer1.0.conv2.weight",
+        "layer1.0.bn2.weight",
+        "layer1.0.bn2.bias",
+        "layer1.1.conv1.weight",
+        "layer1.1.bn1.weight",
+        "layer1.1.bn1.bias",
+        "layer1.1.conv2.weight",
+        "layer1.1.bn2.weight",
+        "layer1.1.bn2.bias",
+        "layer2.0.conv1.weight",
+        "layer2.0.bn1.weight",
+        "layer2.0.bn1.bias",
+        "layer2.0.conv2.weight",
+        "layer2.0.bn2.weight",
+        "layer2.0.bn2.bias",
+        "layer2.0.downsample.0.weight",
+        "layer2.0.downsample.1.weight",
+        "layer2.0.downsample.1.bias",
+        "layer2.1.conv1.weight",
+        "layer2.1.bn1.weight",
+        "layer2.1.bn1.bias",
+        "layer2.1.conv2.weight",
+        "layer2.1.bn2.weight",
+        "layer2.1.bn2.bias",
+        "layer3.0.conv1.weight",
+        "layer3.0.bn1.weight",
+        "layer3.0.bn1.bias",
+        "layer3.0.conv2.weight",
+        "layer3.0.bn2.weight",
+        "layer3.0.bn2.bias",
+        "layer3.0.downsample.0.weight",
+        "layer3.0.downsample.1.weight",
+        "layer3.0.downsample.1.bias",
+        "layer3.1.conv1.weight",
+        "layer3.1.bn1.weight",
+        "layer3.1.bn1.bias",
+        "layer3.1.conv2.weight",
+        "layer3.1.bn2.weight",
+        "layer3.1.bn2.bias",
+        "layer4.0.conv1.weight",
+        "layer4.0.bn1.weight",
+        "layer4.0.bn1.bias",
+        "layer4.0.conv2.weight",
+        "layer4.0.bn2.weight",
+        "layer4.0.bn2.bias",
+        "layer4.0.downsample.0.weight",
+        "layer4.0.downsample.1.weight",
+        "layer4.0.downsample.1.bias",
+        "layer4.1.conv1.weight",
+        "layer4.1.bn1.weight",
+        "layer4.1.bn1.bias",
+        "layer4.1.conv2.weight",
+        "layer4.1.bn2.weight",
+        "layer4.1.bn2.bias",
+        "fc.weight",
+        "fc.bias"
+      ],
+      "checkpoint_bytes": 44793022,
+      "training_seconds": 71.46377049991861,
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "confusion_matrix": [
+          [
+            45,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            45,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            45,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            45,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            45,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            45
+          ]
+        ],
+        "per_class": {
+          "crazing": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "inclusion": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "patches": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "pitted_surface": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "rolled_in_scale": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "scratches": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 270.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 270.0
+          }
+        },
+        "loss": 0.0016233856686287457
+      },
+      "checkpoint": "experiments/resnet18__full_fine_tuning/best.pth"
+    }
+  ],
+  "final_experiment": "mobilenet_v3_small__feature_extraction",
+  "selection_rule": "Highest validation macro F1; then smaller checkpoint; then fewer trainable parameters; then experiment name ascending."
+}

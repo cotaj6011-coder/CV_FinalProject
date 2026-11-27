@@ -1,0 +1,194 @@
+{
+  "experiment": "resnet18__full_fine_tuning",
+  "architecture": "resnet18",
+  "strategy": "full_fine_tuning",
+  "pretrained_source": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+  "epochs": 15,
+  "best_epoch": 2,
+  "seed": 42,
+  "input_size": 224,
+  "batch_size": 32,
+  "optimizer": "AdamW",
+  "head_learning_rate": 0.001,
+  "backbone_learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "scheduler": "CosineAnnealingLR",
+  "augmentation": "none",
+  "parameters": 11179590,
+  "trainable_parameters": 11179590,
+  "trainable_layers": [
+    "conv1.weight",
+    "bn1.weight",
+    "bn1.bias",
+    "layer1.0.conv1.weight",
+    "layer1.0.bn1.weight",
+    "layer1.0.bn1.bias",
+    "layer1.0.conv2.weight",
+    "layer1.0.bn2.weight",
+    "layer1.0.bn2.bias",
+    "layer1.1.conv1.weight",
+    "layer1.1.bn1.weight",
+    "layer1.1.bn1.bias",
+    "layer1.1.conv2.weight",
+    "layer1.1.bn2.weight",
+    "layer1.1.bn2.bias",
+    "layer2.0.conv1.weight",
+    "layer2.0.bn1.weight",
+    "layer2.0.bn1.bias",
+    "layer2.0.conv2.weight",
+    "layer2.0.bn2.weight",
+    "layer2.0.bn2.bias",
+    "layer2.0.downsample.0.weight",
+    "layer2.0.downsample.1.weight",
+    "layer2.0.downsample.1.bias",
+    "layer2.1.conv1.weight",
+    "layer2.1.bn1.weight",
+    "layer2.1.bn1.bias",
+    "layer2.1.conv2.weight",
+    "layer2.1.bn2.weight",
+    "layer2.1.bn2.bias",
+    "layer3.0.conv1.weight",
+    "layer3.0.bn1.weight",
+    "layer3.0.bn1.bias",
+    "layer3.0.conv2.weight",
+    "layer3.0.bn2.weight",
+    "layer3.0.bn2.bias",
+    "layer3.0.downsample.0.weight",
+    "layer3.0.downsample.1.weight",
+    "layer3.0.downsample.1.bias",
+    "layer3.1.conv1.weight",
+    "layer3.1.bn1.weight",
+    "layer3.1.bn1.bias",
+    "layer3.1.conv2.weight",
+    "layer3.1.bn2.weight",
+    "layer3.1.bn2.bias",
+    "layer4.0.conv1.weight",
+    "layer4.0.bn1.weight",
+    "layer4.0.bn1.bias",
+    "layer4.0.conv2.weight",
+    "layer4.0.bn2.weight",
+    "layer4.0.bn2.bias",
+    "layer4.0.downsample.0.weight",
+    "layer4.0.downsample.1.weight",
+    "layer4.0.downsample.1.bias",
+    "layer4.1.conv1.weight",
+    "layer4.1.bn1.weight",
+    "layer4.1.bn1.bias",
+    "layer4.1.conv2.weight",
+    "layer4.1.bn2.weight",
+    "layer4.1.bn2.bias",
+    "fc.weight",
+    "fc.bias"
+  ],
+  "checkpoint_bytes": 44793022,
+  "training_seconds": 71.46377049991861,
+  "metrics": {
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "confusion_matrix": [
+      [
+        45,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        45,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        45,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        45,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        45,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        45
+      ]
+    ],
+    "per_class": {
+      "crazing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "inclusion": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "patches": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "pitted_surface": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "rolled_in_scale": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "scratches": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 270.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 270.0
+      }
+    },
+    "loss": 0.0016233856686287457
+  },
+  "checkpoint": "experiments/resnet18__full_fine_tuning/best.pth"
+}

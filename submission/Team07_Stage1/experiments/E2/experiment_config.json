@@ -1,0 +1,60 @@
+{
+  "team_id": "TeamXX",
+  "stage": 1,
+  "model_name": "SurfaceCNN",
+  "input_size": [
+    128,
+    128
+  ],
+  "class_order": [
+    "crazing",
+    "inclusion",
+    "patches",
+    "pitted_surface",
+    "rolled_in_scale",
+    "scratches"
+  ],
+  "normalization_mean": [
+    0.5
+  ],
+  "normalization_std": [
+    0.5
+  ],
+  "seed": 42,
+  "improvement_methods": [
+    "data_augmentation"
+  ],
+  "checkpoint_file": "best_model.pth",
+  "epochs": 40,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "optimizer": "Adam",
+  "weight_decay": 0.0,
+  "num_workers": 0,
+  "dropout": 0.0,
+  "augmentation": {
+    "horizontal_flip_p": 0.5,
+    "vertical_flip_p": 0.5,
+    "rotation_degrees": 10
+  },
+  "traditional": {
+    "input_size": [
+      64,
+      64
+    ],
+    "pca_components": 100,
+    "whiten": true,
+    "svm_C": 10.0,
+    "svm_kernel": "rbf",
+    "svm_gamma": "scale"
+  },
+  "selection_metric": "validation_macro_f1",
+  "selection_candidates": [
+    "E2",
+    "E3",
+    "E4"
+  ],
+  "best_epoch": 37,
+  "experiment": "E2",
+  "augmentation_enabled": true
+}

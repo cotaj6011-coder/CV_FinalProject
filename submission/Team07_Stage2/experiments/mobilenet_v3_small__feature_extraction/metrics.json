@@ -1,0 +1,136 @@
+{
+  "experiment": "mobilenet_v3_small__feature_extraction",
+  "architecture": "mobilenet_v3_small",
+  "strategy": "feature_extraction",
+  "pretrained_source": "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth",
+  "epochs": 15,
+  "best_epoch": 2,
+  "seed": 42,
+  "input_size": 224,
+  "batch_size": 32,
+  "optimizer": "AdamW",
+  "head_learning_rate": 0.001,
+  "backbone_learning_rate": 0,
+  "weight_decay": 0.0001,
+  "scheduler": "CosineAnnealingLR",
+  "augmentation": "none",
+  "parameters": 1524006,
+  "trainable_parameters": 596998,
+  "trainable_layers": [
+    "classifier.0.weight",
+    "classifier.0.bias",
+    "classifier.3.weight",
+    "classifier.3.bias"
+  ],
+  "checkpoint_bytes": 6217034,
+  "training_seconds": 44.80407499987632,
+  "metrics": {
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "confusion_matrix": [
+      [
+        45,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        45,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        45,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        45,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        45,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        45
+      ]
+    ],
+    "per_class": {
+      "crazing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "inclusion": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "patches": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "pitted_surface": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "rolled_in_scale": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "scratches": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 270.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 270.0
+      }
+    },
+    "loss": 0.02315027259842113
+  },
+  "checkpoint": "experiments/mobilenet_v3_small__feature_extraction/best.pth"
+}

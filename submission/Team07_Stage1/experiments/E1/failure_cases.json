@@ -1,0 +1,51 @@
+[
+  {
+    "image": "VAL_0159.png",
+    "class_folder": "pitted_surface",
+    "true_label": 3,
+    "prediction": 0,
+    "confidence": 0.9993370175361633
+  },
+  {
+    "image": "VAL_0144.png",
+    "class_folder": "pitted_surface",
+    "true_label": 3,
+    "prediction": 5,
+    "confidence": 0.9111712574958801
+  },
+  {
+    "image": "VAL_0236.png",
+    "class_folder": "scratches",
+    "true_label": 5,
+    "prediction": 3,
+    "confidence": 0.8860469460487366
+  },
+  {
+    "image": "VAL_0097.png",
+    "class_folder": "patches",
+    "true_label": 2,
+    "prediction": 3,
+    "confidence": 0.8052662014961243
+  },
+  {
+    "image": "VAL_0160.png",
+    "class_folder": "pitted_surface",
+    "true_label": 3,
+    "prediction": 0,
+    "confidence": 0.7310384511947632
+  },
+  {
+    "image": "VAL_0177.png",
+    "class_folder": "pitted_surface",
+    "true_label": 3,
+    "prediction": 5,
+    "confidence": 0.6170897483825684
+  },
+  {
+    "image": "VAL_0083.png",
+    "class_folder": "inclusion",
+    "true_label": 1,
+    "prediction": 3,
+    "confidence": 0.5878569483757019
+  }
+]

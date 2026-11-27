@@ -1,0 +1,32 @@
+{
+  "team_id": "Team07",
+  "stage": 2,
+  "architecture": "mobilenet_v3_small",
+  "strategy": "feature_extraction",
+  "pretrained_source": "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth",
+  "input_size": 224,
+  "class_order": [
+    "crazing",
+    "inclusion",
+    "patches",
+    "pitted_surface",
+    "rolled_in_scale",
+    "scratches"
+  ],
+  "normalization_mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "normalization_std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "seed": 42,
+  "checkpoint_file": "stage2_model.pth",
+  "selection_metric": "validation_macro_f1",
+  "experiment": "mobilenet_v3_small__feature_extraction",
+  "best_epoch": 2,
+  "selection_rule": "Highest validation macro F1; then smaller checkpoint; then fewer trainable parameters; then experiment name ascending."
+}

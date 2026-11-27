@@ -1,0 +1,9 @@
+{
+  "selection_metric": "validation mAP@0.5",
+  "selected_epoch": 49,
+  "selected_validation_map50": 0.73335,
+  "source_checkpoint": "experiments/train/weights/epoch48.pt",
+  "epochs_completed": 60,
+  "training_results_csv": "experiments/train/results.csv",
+  "checkpoint_file": "stage3_model.pt"
+}

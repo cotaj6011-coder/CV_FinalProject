@@ -1,0 +1,108 @@
+{
+  "source_checkpoint": "experiments/train/weights/epoch48.pt",
+  "inference_checkpoint": "stage3_model.pt",
+  "training_snapshot_bytes": 16032468,
+  "inference_checkpoint_bytes": 5458948,
+  "training_snapshot_sha256": "8e2f4a6dc41bcccf0f9345b63ad437a3dd55c52a8f967c28f3151229748257fe",
+  "inference_checkpoint_sha256": "7ea155b24f21cfc624010c45496b5add0a1b79e4f76123d8a61bf3dbe28c2449",
+  "export_method": "Ultralytics strip_optimizer; selected EMA preserved; original snapshot retained",
+  "stored_model_precision": "FP16 floating-point tensors; integer buffers unchanged",
+  "evaluation_precision": "FP32 (half=False)",
+  "state_tensor_count": 499,
+  "model_tensors_equal": true,
+  "validation_equal": true,
+  "validation_note": "Reloaded exported checkpoint and reran full GPU validation in FP32. Official metrics, all 270 per-image predictions, fixed-threshold metrics, threshold sweep and failure cases exactly equal the saved pre-export evaluation.",
+  "validation_images": 270,
+  "validation_instances": 641,
+  "validation_checks": {
+    "official_metrics": true,
+    "fixed_threshold_metrics": true,
+    "threshold_sweep": true,
+    "failure_cases": true,
+    "validation_images": true,
+    "validation_instances": true,
+    "parameter_count": true,
+    "validation_predictions.json": true,
+    "threshold_sweep.json": true,
+    "failure_cases.json": true
+  },
+  "validation_map50_before": 0.7334757128898547,
+  "validation_map50_after": 0.7334757128898547,
+  "privacy_sanitization": {
+    "scope": "Replaced absolute training metadata paths with paths relative to the Stage 3 directory.",
+    "relative_paths": {
+      "data": "experiments/prepared_data/data.yaml",
+      "project": "experiments",
+      "save_dir": "experiments/train"
+    },
+    "tensors_optimizer_and_precision_preserved": true,
+    "cpu_inference_outputs_equal": true,
+    "files": [
+      {
+        "file": "stage3_model.pt",
+        "sha256_before": "b32422d883b034da5c5279e45850c71eac27016b60fca474938e02711c49aef2",
+        "sha256_after": "7ea155b24f21cfc624010c45496b5add0a1b79e4f76123d8a61bf3dbe28c2449",
+        "bytes_before": 5459204,
+        "bytes_after": 5458948,
+        "updated_fields": [
+          "checkpoint.model.__dict__.args.data",
+          "checkpoint.model.__dict__.args.project",
+          "checkpoint.model.__dict__.args.save_dir",
+          "checkpoint.train_args.data",
+          "checkpoint.train_args.project"
+        ],
+        "all_serialized_tensor_count": 503,
+        "all_serialized_tensors_and_dtypes_equal": true,
+        "other_strings_unchanged": true,
+        "remaining_sensitive_string_matches": 0,
+        "cpu_inference": {
+          "input_shape": [
+            1,
+            3,
+            320,
+            320
+          ],
+          "input_seed": 42,
+          "input_distribution": "uniform [0,1)",
+          "dtype": "float32",
+          "output_tensor_count": 4,
+          "outputs_bitwise_equal": true,
+          "maximum_absolute_difference": 0.0
+        }
+      },
+      {
+        "file": "experiments/train/weights/epoch48.pt",
+        "sha256_before": "72c0805de4301623ff4074c81970157b0ab771070701fe824d72f3bd61e86f84",
+        "sha256_after": "8e2f4a6dc41bcccf0f9345b63ad437a3dd55c52a8f967c28f3151229748257fe",
+        "bytes_before": 16047316,
+        "bytes_after": 16032468,
+        "updated_fields": [
+          "checkpoint.ema.__dict__.args.__dict__.data",
+          "checkpoint.ema.__dict__.args.__dict__.project",
+          "checkpoint.ema.__dict__.args.__dict__.save_dir",
+          "checkpoint.train_args.data",
+          "checkpoint.train_args.project",
+          "checkpoint.train_args.save_dir"
+        ],
+        "all_serialized_tensor_count": 1270,
+        "all_serialized_tensors_and_dtypes_equal": true,
+        "other_strings_unchanged": true,
+        "remaining_sensitive_string_matches": 0,
+        "cpu_inference": {
+          "input_shape": [
+            1,
+            3,
+            320,
+            320
+          ],
+          "input_seed": 42,
+          "input_distribution": "uniform [0,1)",
+          "dtype": "float32",
+          "output_tensor_count": 4,
+          "outputs_bitwise_equal": true,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    ]
+  }
+}

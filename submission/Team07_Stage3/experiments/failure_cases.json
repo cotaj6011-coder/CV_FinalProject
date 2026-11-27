@@ -1,0 +1,266 @@
+[
+  {
+    "image": "VAL_0001.png",
+    "matches": [],
+    "false_positives": [
+      {
+        "class_id": 0,
+        "confidence": 0.26766064763069153,
+        "bbox": [
+          14.143333435058594,
+          31.155899047851562,
+          140.97607421875,
+          86.25750732421875
+        ],
+        "best_same_class_iou": 0.20858052736829744,
+        "kind": "poor_localization"
+      }
+    ],
+    "false_negatives": [
+      {
+        "class_id": 0,
+        "bbox": [
+          1.0000000000000009,
+          1.0000000000000009,
+          141.0,
+          50.0
+        ]
+      },
+      {
+        "class_id": 0,
+        "bbox": [
+          1.0000000000000009,
+          106.99999999999999,
+          119.0,
+          162.0
+        ]
+      }
+    ],
+    "figure": "experiments/figures/failure_01_VAL_0001.png"
+  },
+  {
+    "image": "VAL_0046.png",
+    "matches": [
+      {
+        "prediction": {
+          "class_id": 1,
+          "confidence": 0.7882911562919617,
+          "bbox": [
+            19.73566436767578,
+            53.42503356933594,
+            46.22026824951172,
+            97.61190795898438
+          ]
+        },
+        "ground_truth_index": 2,
+        "iou": 0.8667027044843826
+      },
+      {
+        "prediction": {
+          "class_id": 1,
+          "confidence": 0.7099987864494324,
+          "bbox": [
+            22.517492294311523,
+            13.666529655456543,
+            36.694236755371094,
+            43.22459411621094
+          ]
+        },
+        "ground_truth_index": 0,
+        "iou": 0.8267370222776815
+      }
+    ],
+    "false_positives": [
+      {
+        "class_id": 1,
+        "confidence": 0.7768481969833374,
+        "bbox": [
+          16.52957534790039,
+          131.79629516601562,
+          37.48057556152344,
+          188.55438232421875
+        ],
+        "best_same_class_iou": 0.4464361317509894,
+        "kind": "poor_localization"
+      },
+      {
+        "class_id": 1,
+        "confidence": 0.5794419050216675,
+        "bbox": [
+          19.239009857177734,
+          53.80207061767578,
+          44.94776153564453,
+          114.87480163574219
+        ],
+        "best_same_class_iou": 0.6607462160917471,
+        "kind": "false_positive"
+      }
+    ],
+    "false_negatives": [
+      {
+        "class_id": 1,
+        "bbox": [
+          18.0,
+          93.0,
+          42.0,
+          186.0
+        ]
+      }
+    ],
+    "figure": "experiments/figures/failure_02_VAL_0046.png"
+  },
+  {
+    "image": "VAL_0077.png",
+    "matches": [
+      {
+        "prediction": {
+          "class_id": 1,
+          "confidence": 0.7038083672523499,
+          "bbox": [
+            151.3697509765625,
+            14.625887870788574,
+            168.10137939453125,
+            57.61616516113281
+          ]
+        },
+        "ground_truth_index": 1,
+        "iou": 0.7625531841869649
+      },
+      {
+        "prediction": {
+          "class_id": 1,
+          "confidence": 0.6598029136657715,
+          "bbox": [
+            152.03858947753906,
+            26.4398193359375,
+            195.29824829101562,
+            198.96563720703125
+          ]
+        },
+        "ground_truth_index": 0,
+        "iou": 0.700205708787413
+      }
+    ],
+    "false_positives": [
+      {
+        "class_id": 5,
+        "confidence": 0.5398527383804321,
+        "bbox": [
+          40.6195068359375,
+          52.34878158569336,
+          64.85780334472656,
+          198.90414428710938
+        ],
+        "best_same_class_iou": 0.0,
+        "kind": "false_positive"
+      },
+      {
+        "class_id": 5,
+        "confidence": 0.30213865637779236,
+        "bbox": [
+          42.00843048095703,
+          53.72119903564453,
+          64.2664794921875,
+          163.6536865234375
+        ],
+        "best_same_class_iou": 0.0,
+        "kind": "false_positive"
+      }
+    ],
+    "false_negatives": [],
+    "figure": "experiments/figures/failure_03_VAL_0077.png"
+  },
+  {
+    "image": "VAL_0106.png",
+    "matches": [
+      {
+        "prediction": {
+          "class_id": 2,
+          "confidence": 0.8128687739372253,
+          "bbox": [
+            129.302978515625,
+            0.0,
+            184.03717041015625,
+            114.79849243164062
+          ]
+        },
+        "ground_truth_index": 1,
+        "iou": 0.9361949288333317
+      },
+      {
+        "prediction": {
+          "class_id": 2,
+          "confidence": 0.5597640872001648,
+          "bbox": [
+            0.0,
+            155.6775360107422,
+            39.2001953125,
+            199.933349609375
+          ]
+        },
+        "ground_truth_index": 0,
+        "iou": 0.7356878162701578
+      }
+    ],
+    "false_positives": [
+      {
+        "class_id": 2,
+        "confidence": 0.499483585357666,
+        "bbox": [
+          66.68115997314453,
+          0.0,
+          122.93672180175781,
+          13.386432647705078
+        ],
+        "best_same_class_iou": 0.0,
+        "kind": "false_positive"
+      },
+      {
+        "class_id": 2,
+        "confidence": 0.25932350754737854,
+        "bbox": [
+          0.019440650939941406,
+          126.13143920898438,
+          37.955650329589844,
+          199.74441528320312
+        ],
+        "best_same_class_iou": 0.454096038446177,
+        "kind": "poor_localization"
+      }
+    ],
+    "false_negatives": [],
+    "figure": "experiments/figures/failure_04_VAL_0106.png"
+  },
+  {
+    "image": "VAL_0145.png",
+    "matches": [
+      {
+        "prediction": {
+          "class_id": 3,
+          "confidence": 0.7771892547607422,
+          "bbox": [
+            136.16844177246094,
+            0.5455207824707031,
+            199.60125732421875,
+            199.985595703125
+          ]
+        },
+        "ground_truth_index": 1,
+        "iou": 0.9784351488225991
+      }
+    ],
+    "false_positives": [],
+    "false_negatives": [
+      {
+        "class_id": 3,
+        "bbox": [
+          12.999999999999995,
+          1.0000000000000009,
+          104.0,
+          133.0
+        ]
+      }
+    ],
+    "figure": "experiments/figures/failure_05_VAL_0145.png"
+  }
+]

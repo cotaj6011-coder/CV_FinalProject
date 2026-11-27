@@ -1,0 +1,186 @@
+{
+  "audit_date": "2026-11-20",
+  "source": {
+    "assignment_url": "https://lms2020.nchu.edu.tw/course/homework/76885",
+    "archive_name": "FactoryVision_DataSet.zip",
+    "archive_bytes": 93949108,
+    "archive_sha256": "7df2032baab64aefcf5f7c647ffdaceba218c3ae1c0f6e6e387d7fa9683dcba1",
+    "zip_crc_ok": true,
+    "unsafe_archive_paths": 0
+  },
+  "dataset_root": "data/STUDENT_PUBLIC",
+  "file_counts": {
+    "total": 6123,
+    "png": 3060,
+    "txt": 1532,
+    "xml": 1530,
+    "yaml": 1
+  },
+  "class_order": [
+    "crazing",
+    "inclusion",
+    "patches",
+    "pitted_surface",
+    "rolled_in_scale",
+    "scratches"
+  ],
+  "classification": {
+    "root": "data/STUDENT_PUBLIC/classification",
+    "image_size": [
+      200,
+      200
+    ],
+    "image_mode": "L",
+    "train_images": 1260,
+    "validation_images": 270,
+    "train_per_class": {
+      "crazing": 210,
+      "inclusion": 210,
+      "patches": 210,
+      "pitted_surface": 210,
+      "rolled_in_scale": 210,
+      "scratches": 210
+    },
+    "validation_per_class": {
+      "crazing": 45,
+      "inclusion": 45,
+      "patches": 45,
+      "pitted_surface": 45,
+      "rolled_in_scale": 45,
+      "scratches": 45
+    },
+    "layout": "<split>/<class>/<image_id>.png"
+  },
+  "detection": {
+    "root": "data/STUDENT_PUBLIC/detection",
+    "image_size": [
+      200,
+      200
+    ],
+    "image_mode": "RGB",
+    "train_images": 1260,
+    "validation_images": 270,
+    "train": {
+      "images": 1260,
+      "voc_xml": 1260,
+      "yolo_txt": 1260,
+      "boxes": 2924,
+      "boxes_per_class": {
+        "crazing": 487,
+        "inclusion": 716,
+        "patches": 598,
+        "pitted_surface": 299,
+        "rolled_in_scale": 435,
+        "scratches": 389
+      },
+      "multi_class_images": 88
+    },
+    "validation": {
+      "images": 270,
+      "voc_xml": 270,
+      "yolo_txt": 270,
+      "boxes": 641,
+      "boxes_per_class": {
+        "crazing": 102,
+        "inclusion": 149,
+        "patches": 152,
+        "pitted_surface": 66,
+        "rolled_in_scale": 93,
+        "scratches": 79
+      },
+      "multi_class_images": 16
+    },
+    "image_layout": "<split>/images/<image_id>.png",
+    "yolo_layout": "<split>/labels_yolo/<image_id>.txt",
+    "voc_layout": "<split>/annotations_voc/<image_id>.xml",
+    "yolo_format": [
+      "class_id",
+      "center_x_normalized",
+      "center_y_normalized",
+      "width_normalized",
+      "height_normalized"
+    ],
+    "voc_format": [
+      "xmin_pixel",
+      "ymin_pixel",
+      "xmax_pixel",
+      "ymax_pixel"
+    ],
+    "voc_class_name_mapping": {
+      "rolled-in_scale": "rolled_in_scale"
+    },
+    "raw_voc_class_counts": {
+      "crazing": 589,
+      "inclusion": 865,
+      "patches": 750,
+      "pitted_surface": 365,
+      "rolled-in_scale": 528,
+      "scratches": 468
+    },
+    "annotation_pairing_ok": true,
+    "valid_bbox_coordinates": true,
+    "voc_yolo_equivalent_after_class_name_mapping": true,
+    "implementation_note": "Read labels_yolo explicitly. Common YOLO loaders may instead expect a sibling labels directory; preserve original data when preparing compatible input."
+  },
+  "validation": {
+    "all_png_decoded": true,
+    "all_image_sizes_200x200": true,
+    "classification_detection_stems_match": true,
+    "classification_detection_byte_identical_pairs": 0,
+    "classification_detection_pixel_identical_pairs": 0,
+    "classification_detection_mean_absolute_pixel_difference_min_mean_max": [
+      0.696425,
+      1.439122728758168,
+      1.85895
+    ],
+    "classification_detection_max_absolute_pixel_difference": 13,
+    "detection_equal_rgb_channel_images": 1530
+  },
+  "fixed_split_duplicate": {
+    "count": 1,
+    "comparison": "SHA-256 of decoded RGB pixel bytes for classification images",
+    "pairs": [
+      [
+        "classification/train/patches/TRN_0504.png",
+        "classification/validation/patches/VAL_0101.png"
+      ]
+    ],
+    "action": "Preserved the TA-provided fixed split without removing or moving images; disclose in report."
+  },
+  "hidden_data": {
+    "included": false,
+    "expected": false,
+    "evidence": "README_STUDENT_DATA.txt states: Hidden data is not included."
+  },
+  "environment": {
+    "system_python_version": "3.11.9",
+    "gpu_name": "NVIDIA GeForce RTX 3060",
+    "gpu_vram_mib": 12288,
+    "nvidia_driver": "560.94",
+    "system_packages_present": {
+      "scikit-learn": "1.9.1",
+      "Pillow": "12.3.0",
+      "numpy": "2.4.6"
+    },
+    "system_packages_missing_at_audit": [
+      "torch",
+      "torchvision",
+      "cv2",
+      "ultralytics"
+    ],
+    "bundled_python_packages_missing_at_audit": [
+      "torch",
+      "torchvision",
+      "cv2",
+      "sklearn",
+      "ultralytics"
+    ],
+    "torch_cuda_verified_at_audit": false
+  },
+  "status": {
+    "training_data_complete": true,
+    "additional_user_dataset_required": false,
+    "raw_files_modified": false,
+    "extract_destination": "data/STUDENT_PUBLIC"
+  }
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "image": "VAL_0097.png",
+    "class_folder": "patches",
+    "true_label": 2,
+    "prediction": 0,
+    "confidence": 0.9907558560371399
+  },
+  {
+    "image": "VAL_0177.png",
+    "class_folder": "pitted_surface",
+    "true_label": 3,
+    "prediction": 5,
+    "confidence": 0.9755780100822449
+  },
+  {
+    "image": "VAL_0159.png",
+    "class_folder": "pitted_surface",
+    "true_label": 3,
+    "prediction": 0,
+    "confidence": 0.8804465532302856
+  },
+  {
+    "image": "VAL_0142.png",
+    "class_folder": "pitted_surface",
+    "true_label": 3,
+    "prediction": 1,
+    "confidence": 0.7914664149284363
+  },
+  {
+    "image": "VAL_0144.png",
+    "class_folder": "pitted_surface",
+    "true_label": 3,
+    "prediction": 5,
+    "confidence": 0.7240240573883057
+  },
+  {
+    "image": "VAL_0090.png",
+    "class_folder": "inclusion",
+    "true_label": 1,
+    "prediction": 5,
+    "confidence": 0.5862436294555664
+  },
+  {
+    "image": "VAL_0180.png",
+    "class_folder": "pitted_surface",
+    "true_label": 3,
+    "prediction": 5,
+    "confidence": 0.5682168006896973
+  },
+  {
+    "image": "VAL_0169.png",
+    "class_folder": "pitted_surface",
+    "true_label": 3,
+    "prediction": 5,
+    "confidence": 0.5602335929870605
+  }
+]

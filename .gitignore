@@ -1,0 +1,32 @@
+# Only reviewed project directories and files are eligible for publication.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/environment.json
+!/dataset_audit.json
+!/tools/
+!/submission/
+!/output/
+!/audits/
+
+/output/*
+!/output/Team07_Final_Report.pdf
+
+**/__pycache__/
+**/prepared_data/
+**/smoke/
+**/*.py[cod]
+**/*.cache
+**/*.log
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/Thumbs.db
+**/.DS_Store
+
+# Upstream pretrained weights can be downloaded by the training code.
+/submission/Team07_Stage3/weights/

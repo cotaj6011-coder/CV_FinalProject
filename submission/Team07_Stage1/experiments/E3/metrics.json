@@ -1,0 +1,123 @@
+{
+  "accuracy": 0.9703703703703703,
+  "macro_precision": 0.9725374310480693,
+  "macro_recall": 0.9703703703703704,
+  "macro_f1": 0.9701237569851461,
+  "samples": 270,
+  "per_class": {
+    "crazing": {
+      "precision": 0.9574468085106383,
+      "recall": 1.0,
+      "f1-score": 0.9782608695652174,
+      "support": 45.0
+    },
+    "inclusion": {
+      "precision": 0.9777777777777777,
+      "recall": 0.9777777777777777,
+      "f1-score": 0.9777777777777777,
+      "support": 45.0
+    },
+    "patches": {
+      "precision": 1.0,
+      "recall": 0.9777777777777777,
+      "f1-score": 0.9887640449438202,
+      "support": 45.0
+    },
+    "pitted_surface": {
+      "precision": 1.0,
+      "recall": 0.8666666666666667,
+      "f1-score": 0.9285714285714286,
+      "support": 45.0
+    },
+    "rolled_in_scale": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 45.0
+    },
+    "scratches": {
+      "precision": 0.9,
+      "recall": 1.0,
+      "f1-score": 0.9473684210526315,
+      "support": 45.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      45,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      44,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      44,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      39,
+      0,
+      4
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      45,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      45
+    ]
+  ],
+  "loss": 0.11749812433565104,
+  "experiment": "E3",
+  "model_name": "SurfaceCNN",
+  "seed": 42,
+  "best_epoch": 40,
+  "epochs_budget": 40,
+  "train_samples": 1260,
+  "validation_samples": 270,
+  "improvement_methods": [
+    "dropout"
+  ],
+  "dropout": 0.5,
+  "parameter_count": 355718,
+  "trainable_parameter_count": 355718,
+  "checkpoint_bytes": 1426296,
+  "training_seconds": 72.00896449992433,
+  "smoke_only": false,
+  "inference": {
+    "mean_ms_per_image": 0.4890559893101454,
+    "median_ms_per_image": 0.4716501571238041,
+    "p95_ms_per_image": 0.5460148444399235,
+    "batch_size": 1,
+    "warmup_iterations": 10,
+    "measured_images": 100,
+    "includes": "forward pass only; excludes loading, preprocessing and host-to-device copy",
+    "device": "cuda",
+    "hardware": "NVIDIA GeForce RTX 3060"
+  }
+}

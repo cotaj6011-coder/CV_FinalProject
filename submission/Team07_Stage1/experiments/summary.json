@@ -1,0 +1,761 @@
+{
+  "stage": 1,
+  "seed": 42,
+  "class_order": [
+    "crazing",
+    "inclusion",
+    "patches",
+    "pitted_surface",
+    "rolled_in_scale",
+    "scratches"
+  ],
+  "selection_metric": "validation_macro_f1",
+  "selection_candidates": [
+    "E2",
+    "E3",
+    "E4"
+  ],
+  "selected_experiment": "E2",
+  "selected_model": {
+    "accuracy": 0.9777777777777777,
+    "macro_precision": 0.9777447962402678,
+    "macro_recall": 0.9777777777777779,
+    "macro_f1": 0.9775636958709747,
+    "samples": 270,
+    "per_class": {
+      "crazing": {
+        "precision": 0.9574468085106383,
+        "recall": 1.0,
+        "f1-score": 0.9782608695652174,
+        "support": 45.0
+      },
+      "inclusion": {
+        "precision": 0.9772727272727273,
+        "recall": 0.9555555555555556,
+        "f1-score": 0.9662921348314607,
+        "support": 45.0
+      },
+      "patches": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "pitted_surface": {
+        "precision": 0.9534883720930233,
+        "recall": 0.9111111111111111,
+        "f1-score": 0.9318181818181818,
+        "support": 45.0
+      },
+      "rolled_in_scale": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "scratches": {
+        "precision": 0.9782608695652174,
+        "recall": 1.0,
+        "f1-score": 0.989010989010989,
+        "support": 45.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        45,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        43,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        45,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        0,
+        41,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        45,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        45
+      ]
+    ],
+    "loss": 0.07717891459663709,
+    "experiment": "E2",
+    "model_name": "SurfaceCNN",
+    "seed": 42,
+    "best_epoch": 37,
+    "epochs_budget": 40,
+    "train_samples": 1260,
+    "validation_samples": 270,
+    "improvement_methods": [
+      "data_augmentation"
+    ],
+    "dropout": 0.0,
+    "parameter_count": 355718,
+    "trainable_parameter_count": 355718,
+    "checkpoint_bytes": 1426296,
+    "training_seconds": 78.9017532998696,
+    "smoke_only": false,
+    "inference": {
+      "mean_ms_per_image": 0.45205100905150175,
+      "median_ms_per_image": 0.44219987466931343,
+      "p95_ms_per_image": 0.4768098006024955,
+      "batch_size": 1,
+      "warmup_iterations": 10,
+      "measured_images": 100,
+      "includes": "forward pass only; excludes loading, preprocessing and host-to-device copy",
+      "device": "cuda",
+      "hardware": "NVIDIA GeForce RTX 3060"
+    }
+  },
+  "experiments": {
+    "traditional": {
+      "accuracy": 0.7444444444444445,
+      "macro_precision": 0.7455409984583611,
+      "macro_recall": 0.7444444444444445,
+      "macro_f1": 0.7392278508727125,
+      "samples": 270,
+      "per_class": {
+        "crazing": {
+          "precision": 0.6739130434782609,
+          "recall": 0.6888888888888889,
+          "f1-score": 0.6813186813186813,
+          "support": 45.0
+        },
+        "inclusion": {
+          "precision": 0.7017543859649122,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.7843137254901961,
+          "support": 45.0
+        },
+        "patches": {
+          "precision": 0.9166666666666666,
+          "recall": 0.9777777777777777,
+          "f1-score": 0.946236559139785,
+          "support": 45.0
+        },
+        "pitted_surface": {
+          "precision": 0.6511627906976745,
+          "recall": 0.6222222222222222,
+          "f1-score": 0.6363636363636364,
+          "support": 45.0
+        },
+        "rolled_in_scale": {
+          "precision": 0.7555555555555555,
+          "recall": 0.7555555555555555,
+          "f1-score": 0.7555555555555555,
+          "support": 45.0
+        },
+        "scratches": {
+          "precision": 0.7741935483870968,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.631578947368421,
+          "support": 45.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          31,
+          0,
+          0,
+          4,
+          9,
+          1
+        ],
+        [
+          0,
+          40,
+          0,
+          5,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          44,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          9,
+          0,
+          28,
+          1,
+          3
+        ],
+        [
+          1,
+          3,
+          0,
+          4,
+          34,
+          3
+        ],
+        [
+          9,
+          5,
+          4,
+          2,
+          1,
+          24
+        ]
+      ],
+      "experiment": "traditional",
+      "model_name": "PCA + RBF SVM",
+      "seed": 42,
+      "train_samples": 1260,
+      "validation_samples": 270,
+      "training_seconds": 0.23662189999595284,
+      "checkpoint_bytes": 2654293,
+      "pca_explained_variance_ratio": 0.9754887223243713,
+      "support_vectors": 1126,
+      "settings": {
+        "input_size": [
+          64,
+          64
+        ],
+        "pca_components": 100,
+        "whiten": true,
+        "svm_C": 10.0,
+        "svm_kernel": "rbf",
+        "svm_gamma": "scale"
+      },
+      "inference": {
+        "mean_ms_per_image": 0.41086400859057903,
+        "median_ms_per_image": 0.4042999353259802,
+        "p95_ms_per_image": 0.4481900250539183,
+        "batch_size": 1,
+        "warmup_iterations": 10,
+        "measured_images": 100,
+        "device": "cpu",
+        "includes": "PCA transform and SVM prediction; excludes image preprocessing"
+      }
+    },
+    "E1": {
+      "accuracy": 0.9740740740740741,
+      "macro_precision": 0.9742977882432092,
+      "macro_recall": 0.9740740740740742,
+      "macro_f1": 0.9740283735154277,
+      "samples": 270,
+      "per_class": {
+        "crazing": {
+          "precision": 0.9574468085106383,
+          "recall": 1.0,
+          "f1-score": 0.9782608695652174,
+          "support": 45.0
+        },
+        "inclusion": {
+          "precision": 1.0,
+          "recall": 0.9777777777777777,
+          "f1-score": 0.9887640449438202,
+          "support": 45.0
+        },
+        "patches": {
+          "precision": 1.0,
+          "recall": 0.9777777777777777,
+          "f1-score": 0.9887640449438202,
+          "support": 45.0
+        },
+        "pitted_surface": {
+          "precision": 0.9318181818181818,
+          "recall": 0.9111111111111111,
+          "f1-score": 0.9213483146067416,
+          "support": 45.0
+        },
+        "rolled_in_scale": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 45.0
+        },
+        "scratches": {
+          "precision": 0.9565217391304348,
+          "recall": 0.9777777777777777,
+          "f1-score": 0.967032967032967,
+          "support": 45.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          45,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          44,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          44,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          41,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          45,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          44
+        ]
+      ],
+      "loss": 0.11659363861437197,
+      "experiment": "E1",
+      "model_name": "SurfaceCNN",
+      "seed": 42,
+      "best_epoch": 28,
+      "epochs_budget": 40,
+      "train_samples": 1260,
+      "validation_samples": 270,
+      "improvement_methods": [],
+      "dropout": 0.0,
+      "parameter_count": 355718,
+      "trainable_parameter_count": 355718,
+      "checkpoint_bytes": 1426296,
+      "training_seconds": 71.78899620007724,
+      "smoke_only": false,
+      "inference": {
+        "mean_ms_per_image": 0.4464960005134344,
+        "median_ms_per_image": 0.43474999256432056,
+        "p95_ms_per_image": 0.5048749968409538,
+        "batch_size": 1,
+        "warmup_iterations": 10,
+        "measured_images": 100,
+        "includes": "forward pass only; excludes loading, preprocessing and host-to-device copy",
+        "device": "cuda",
+        "hardware": "NVIDIA GeForce RTX 3060"
+      }
+    },
+    "E2": {
+      "accuracy": 0.9777777777777777,
+      "macro_precision": 0.9777447962402678,
+      "macro_recall": 0.9777777777777779,
+      "macro_f1": 0.9775636958709747,
+      "samples": 270,
+      "per_class": {
+        "crazing": {
+          "precision": 0.9574468085106383,
+          "recall": 1.0,
+          "f1-score": 0.9782608695652174,
+          "support": 45.0
+        },
+        "inclusion": {
+          "precision": 0.9772727272727273,
+          "recall": 0.9555555555555556,
+          "f1-score": 0.9662921348314607,
+          "support": 45.0
+        },
+        "patches": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 45.0
+        },
+        "pitted_surface": {
+          "precision": 0.9534883720930233,
+          "recall": 0.9111111111111111,
+          "f1-score": 0.9318181818181818,
+          "support": 45.0
+        },
+        "rolled_in_scale": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 45.0
+        },
+        "scratches": {
+          "precision": 0.9782608695652174,
+          "recall": 1.0,
+          "f1-score": 0.989010989010989,
+          "support": 45.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          45,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          43,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          45,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          41,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          45,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          45
+        ]
+      ],
+      "loss": 0.07717891459663709,
+      "experiment": "E2",
+      "model_name": "SurfaceCNN",
+      "seed": 42,
+      "best_epoch": 37,
+      "epochs_budget": 40,
+      "train_samples": 1260,
+      "validation_samples": 270,
+      "improvement_methods": [
+        "data_augmentation"
+      ],
+      "dropout": 0.0,
+      "parameter_count": 355718,
+      "trainable_parameter_count": 355718,
+      "checkpoint_bytes": 1426296,
+      "training_seconds": 78.9017532998696,
+      "smoke_only": false,
+      "inference": {
+        "mean_ms_per_image": 0.45205100905150175,
+        "median_ms_per_image": 0.44219987466931343,
+        "p95_ms_per_image": 0.4768098006024955,
+        "batch_size": 1,
+        "warmup_iterations": 10,
+        "measured_images": 100,
+        "includes": "forward pass only; excludes loading, preprocessing and host-to-device copy",
+        "device": "cuda",
+        "hardware": "NVIDIA GeForce RTX 3060"
+      }
+    },
+    "E3": {
+      "accuracy": 0.9703703703703703,
+      "macro_precision": 0.9725374310480693,
+      "macro_recall": 0.9703703703703704,
+      "macro_f1": 0.9701237569851461,
+      "samples": 270,
+      "per_class": {
+        "crazing": {
+          "precision": 0.9574468085106383,
+          "recall": 1.0,
+          "f1-score": 0.9782608695652174,
+          "support": 45.0
+        },
+        "inclusion": {
+          "precision": 0.9777777777777777,
+          "recall": 0.9777777777777777,
+          "f1-score": 0.9777777777777777,
+          "support": 45.0
+        },
+        "patches": {
+          "precision": 1.0,
+          "recall": 0.9777777777777777,
+          "f1-score": 0.9887640449438202,
+          "support": 45.0
+        },
+        "pitted_surface": {
+          "precision": 1.0,
+          "recall": 0.8666666666666667,
+          "f1-score": 0.9285714285714286,
+          "support": 45.0
+        },
+        "rolled_in_scale": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 45.0
+        },
+        "scratches": {
+          "precision": 0.9,
+          "recall": 1.0,
+          "f1-score": 0.9473684210526315,
+          "support": 45.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          45,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          44,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          44,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          39,
+          0,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          45,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          45
+        ]
+      ],
+      "loss": 0.11749812433565104,
+      "experiment": "E3",
+      "model_name": "SurfaceCNN",
+      "seed": 42,
+      "best_epoch": 40,
+      "epochs_budget": 40,
+      "train_samples": 1260,
+      "validation_samples": 270,
+      "improvement_methods": [
+        "dropout"
+      ],
+      "dropout": 0.5,
+      "parameter_count": 355718,
+      "trainable_parameter_count": 355718,
+      "checkpoint_bytes": 1426296,
+      "training_seconds": 72.00896449992433,
+      "smoke_only": false,
+      "inference": {
+        "mean_ms_per_image": 0.4890559893101454,
+        "median_ms_per_image": 0.4716501571238041,
+        "p95_ms_per_image": 0.5460148444399235,
+        "batch_size": 1,
+        "warmup_iterations": 10,
+        "measured_images": 100,
+        "includes": "forward pass only; excludes loading, preprocessing and host-to-device copy",
+        "device": "cuda",
+        "hardware": "NVIDIA GeForce RTX 3060"
+      }
+    },
+    "E4": {
+      "accuracy": 0.9518518518518518,
+      "macro_precision": 0.9559778911564626,
+      "macro_recall": 0.9518518518518518,
+      "macro_f1": 0.9506295434568202,
+      "samples": 270,
+      "per_class": {
+        "crazing": {
+          "precision": 0.9183673469387755,
+          "recall": 1.0,
+          "f1-score": 0.9574468085106383,
+          "support": 45.0
+        },
+        "inclusion": {
+          "precision": 0.9375,
+          "recall": 1.0,
+          "f1-score": 0.967741935483871,
+          "support": 45.0
+        },
+        "patches": {
+          "precision": 1.0,
+          "recall": 0.9555555555555556,
+          "f1-score": 0.9772727272727273,
+          "support": 45.0
+        },
+        "pitted_surface": {
+          "precision": 1.0,
+          "recall": 0.7777777777777778,
+          "f1-score": 0.875,
+          "support": 45.0
+        },
+        "rolled_in_scale": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 45.0
+        },
+        "scratches": {
+          "precision": 0.88,
+          "recall": 0.9777777777777777,
+          "f1-score": 0.9263157894736842,
+          "support": 45.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          45,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          45,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          43,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          35,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          45,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          44
+        ]
+      ],
+      "loss": 0.13452734660219262,
+      "experiment": "E4",
+      "model_name": "SurfaceCNN",
+      "seed": 42,
+      "best_epoch": 34,
+      "epochs_budget": 40,
+      "train_samples": 1260,
+      "validation_samples": 270,
+      "improvement_methods": [
+        "data_augmentation",
+        "dropout"
+      ],
+      "dropout": 0.5,
+      "parameter_count": 355718,
+      "trainable_parameter_count": 355718,
+      "checkpoint_bytes": 1426296,
+      "training_seconds": 79.18720570020378,
+      "smoke_only": false,
+      "inference": {
+        "mean_ms_per_image": 0.451912023127079,
+        "median_ms_per_image": 0.4405500367283821,
+        "p95_ms_per_image": 0.4683298291638492,
+        "batch_size": 1,
+        "warmup_iterations": 10,
+        "measured_images": 100,
+        "includes": "forward pass only; excludes loading, preprocessing and host-to-device copy",
+        "device": "cuda",
+        "hardware": "NVIDIA GeForce RTX 3060"
+      }
+    }
+  },
+  "data_note": "The supplied fixed split contains an identical patches image pair: train TRN_0504.png and validation VAL_0101.png. The required split was preserved; validation metrics may be slightly optimistic."
+}
